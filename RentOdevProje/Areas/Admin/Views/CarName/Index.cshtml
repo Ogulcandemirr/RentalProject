@@ -1,0 +1,136 @@
+﻿@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<h2>Araç-Marka İşlemleri</h2>
+<br />
+
+<button type="button" id="btngetlist" class="btn btn-outline-info">Araç Listesi</button>
+<button type="button" id="btngetbyid" class="btn btn-outline-primary">Araç Getir</button>
+<button type="button" id="btnaddcarname" class="btn btn-outline-warning">Araç Ekle</button>
+<button type="button" id="btndeletecar" class="btn btn-outline-danger">Araç Sil</button>
+<button type="button" id="btnupdatecar" class="btn btn-outline-success">Araç Güncelle</button>
+<br />
+<br />
+
+<div id="carlist">
+	Araba listesi gelecek
+</div>
+<br />
+<div>
+	<input type="text" id="txtid" placeholder="Araç Id Değerini Giriniz" class="form-control" />
+</div>
+<br />
+<div>
+	<input type="text" id="txtcarid" placeholder="Silinecek Id Değerini Giriniz" class="form-control" />
+</div>
+<br />
+<div>
+	<input type="text" id="txtcareditid" placeholder="Güncellenecek Id Değerini Giriniz" class="form-control" />
+	<input type="text" id="txtcarname" placeholder="Güncellenecek Araç Adı Değerini Giriniz" class="form-control" />
+	<input type="text" id="txtdatename" placeholder="Güncellenecek Tarih Değerini Giriniz" class="form-control" />
+</div>
+<br />
+<div id="carlistbyid">
+</div>
+<br />
+<div>
+	<input type="text" id="txtname" placeholder="Araç Adını Giriniz" class="form-control" />
+	<br />
+	<input type="text" id="txtdate" placeholder="Tarih" class="form-control" />
+	<br />
+	<input type="text" id="txtprice" placeholder="Fiyat" class="form-control" />
+	<br />
+	<input type="text" id="txtcapacity" placeholder="Kapasite" class="form-control" />
+</div>
+
+<script>
+	$("#btngetlist").click(function () {
+		$.ajax({
+			contentType: "application/json",
+			dataType: "json",
+			type: "Get",
+			url: "/Admin/CarName/CarNameList/",
+			success: function (func) {
+				let w = jQuery.parseJSON(func);
+				console.log(w);
+				let tablehtml = "<table class = table table-bordered> <tr><th> Araç Adı </th> <th> Gün </th> <th> Araç Fiyatı </th> </tr>";
+
+				$.each(w, (index, value) => {
+					tablehtml += `<tr><td>${value.Name}</td> <td>${value.Date}</td> <td>${value.Price} ₺ </td> </tr>`
+				});
+				tablehtml += "</table>";
+				$("#carlist").html(tablehtml);
+
+			}
+		});
+	});
+
+	$("#btnaddcarname").click(function () {
+		let carnamevalues = {
+			Name: $("#txtname").val(),
+			Date: $("#txtdate").val(),
+			Price: $("#txtprice").val(),
+			Capacity: $("#txtcapacity").val()
+		};
+		$.ajax({
+			type: "post",
+			url: "/Admin/CarName/AddNameCar/",
+			data: carnamevalues,
+			success: function (func) {
+				let result = jQuery.parseJSON(func);
+				alert("Araç adı-markası başarılı bir şekilde eklendi");
+			}
+		});
+	});
+
+	$("#btngetbyid").click(x => {
+		let id = $("#txtid").val();
+		$.ajax({
+			contentType: "application/json",
+			dataType: "json",
+			type: "Get",
+			url: "/Admin/CarName/GetById/",
+			data: { CarId: id },
+			success: function (fun2) {
+				let result = jQuery.parseJSON(fun2);
+				console.log(result);
+				let htmlstr = `<table class=table table-bordered><tr><th>Araç Adı</th><th>Günlük</th><th>Fiyatı</th></tr><tr><td>${result.Name}</td><td>${result.Date}</td><td>${result.Price} $</td></tr></table>`;
+				$("#carlistbyid").html(htmlstr);
+			}
+		});
+	});
+
+	$("#btndeletecar").click(x => {
+		let id = $("#txtcarid").val();
+		$.ajax({
+			url: "/Admin/CarName/DeleteCarName/" + id,
+			type: "post",
+			contentType: "application/json",
+			dataType: "json",
+			success: function (fun3) {
+				alert("Araç Silindi");
+			}
+		});
+	});
+
+	$("#btnupdatecar").click(function () {
+		let values = {
+			CarId: $("#txtcareditid").val(),
+			Name: $("#txtcarname").val(),
+			Date: $("#txtdatename").val()
+		};
+		$.ajax({
+			type: "post",
+			url: "/Admin/CarName/UpdateCarName/",
+			data: values,
+			success: function (fun4) {
+				alert("Güncelleme Gerçekleştirildi");
+			}
+		});
+	});
+</script>
+
+@* 66 bk *@

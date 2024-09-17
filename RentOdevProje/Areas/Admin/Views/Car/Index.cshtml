@@ -1,0 +1,48 @@
+﻿@using EntityLayer.Concrete
+@model List<Car>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Araçlar</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Araç Adı</th>
+        <th>Fiyat</th>
+        <th>Kapasite</th>
+        <th>Tanım</th>
+        <th>Sitede Gör</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Aktif/Pasif</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CarId</td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>@item.Capacity</td>
+            <td>@item.Description</td>
+            <td><a href="/Cars/CarsDetails/@item.CarId" class="btn btn-outline-info">Sitede Gör</a></td>
+            <td><a href="/Admin/Car/DeleteCar/@item.CarId" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Admin/Car/UpdateCar/@item.CarId" class="btn btn-outline-success">Güncelle</a></td>
+            @{
+                if (item.Status == true)
+                {
+                    <td><a href="/Admin/Car/ChangeToFalse/@item.CarId" class="btn btn-outline-warning">Pasif Yap</a></td>
+                }
+                else
+                {
+                    <td><a href="/Admin/Car/ChangeToTrue/@item.CarId" class="btn btn-outline-primary">Aktif Yap</a></td>
+
+                }
+            }
+
+        </tr>
+    }
+</table>
+<a href="/Admin/Car/AddCar" class="btn btn-outline-primary">Yeni Araç</a>
+

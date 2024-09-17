@@ -1,0 +1,39 @@
+﻿@model List<GetAllCarQuerryResult>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h2>CQRS Araç Verileri</h2>
+
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Araç Bilgisi</th>
+        <th>Günlük</th>
+        <th>Fiyat</th>
+        <th>Kapasite</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td>@item.name</td>
+            <td>@item.date</td>
+            <td>@item.price</td>
+            <td>@item.capacity</td>
+            <td><a href="/Admin/CarCQRS/DeleteCar/@item.id" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Admin/CarCQRS/GetCar/@item.id" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href ="/Admin/CarCQRS/AddCar/" class=" btn btn-outline-primary">Yeni Araç Bilgisi Girişi</a>
+
+
+@* 75 bk *@

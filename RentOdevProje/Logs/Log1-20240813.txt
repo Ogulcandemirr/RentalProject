@@ -1,0 +1,7 @@
+2024-08-13T02:54:52.7273626+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-08-13T02:54:52.7408401+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-08-13T02:54:52.7422186+03:00  [INF] Content root path: "C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje" (b5d60022)
+2024-08-13T02:54:52.9717332+03:00 80000002-000a-ff00-b63f-84710c7967bb [INF] Index sayfası çağrıldı (1598f5de)
+2024-08-13T02:54:52.9735669+03:00 80000002-000a-ff00-b63f-84710c7967bb [INF] Error Log çağrıldı (6a90909e)
+2024-08-13T02:54:54.2476851+03:00 80000002-0011-ff00-b63f-84710c7967bb [INF] Index sayfası çağrıldı (1598f5de)
+2024-08-13T02:54:54.2496848+03:00 80000002-0011-ff00-b63f-84710c7967bb [INF] Error Log çağrıldı (6a90909e)

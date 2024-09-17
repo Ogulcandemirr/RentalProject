@@ -1,0 +1,23 @@
+﻿@model CreateCarCommand
+@{
+    ViewData["Title"] = "AddCarr";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Araç Ekleme (CQRS)</h2>
+
+<form method="post">
+    <label>Araç Adı</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <label>Tarih</label>
+    <input type="text" asp-for="Date" class="form-control" />
+    <br />
+    <label>Fiyat</label>
+    <input type="text" asp-for="Price" class="form-control" />
+    <br />
+    <label>Kapasite</label>
+    <input type="text" asp-for="Capacity" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary">Araç Kaydet</button>
+</form>

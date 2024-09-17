@@ -1,0 +1,83 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="ClosedXML" Version="0.97.0" />
+    <PackageReference Include="EPPlus" Version="6.0.7" />
+    <PackageReference Include="FluentValidation" Version="11.9.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="1.9.2" />
+    <PackageReference Include="MailKit" Version="3.4.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.1.39" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Member\Data\" />
+    <Folder Include="wwwroot\UserImages\" />
+    <Folder Include="wwwroot\Traversal_Login_Register-main\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\membernew\assets\.DS_Store" />
+    <None Include="wwwroot\membernew\gulp-tasks\.DS_Store" />
+    <None Include="wwwroot\membernew\src\.DS_Store" />
+    <None Include="wwwroot\membernew\src\js\.DS_Store" />
+    <None Include="wwwroot\membernew\src\js\core\.DS_Store" />
+    <None Include="wwwroot\membernew\src\js\core\libraries\.DS_Store" />
+    <None Include="wwwroot\membernew\src\js\scripts\.DS_Store" />
+    <None Include="wwwroot\membernew\src\js\scripts\charts\.DS_Store" />
+    <None Include="wwwroot\membernew\src\js\scripts\charts\chartjs\.DS_Store" />
+    <None Include="wwwroot\membernew\src\js\scripts\pages\.DS_Store" />
+    <None Include="wwwroot\membernew\src\scss\.DS_Store" />
+    <None Include="wwwroot\membernew\src\scss\bootstrap-extended\.sass-cache\b161be96449978188ab92f1e37bbeda94f2952ce\buttons.scssc" />
+    <None Include="wwwroot\membernew\src\scss\components\.DS_Store" />
+    <None Include="wwwroot\membernew\src\scss\core\.DS_Store" />
+    <None Include="wwwroot\membernew\src\scss\core\layouts\.DS_Store" />
+    <None Include="wwwroot\membernew\src\scss\core\menu\.DS_Store" />
+    <None Include="wwwroot\membernew\src\scss\core\menu\menu-types\.DS_Store" />
+    <None Include="wwwroot\membernew\src\scss\pages\.DS_Store" />
+    <None Include="wwwroot\membernew\src\scss\plugins\.DS_Store" />
+    <None Include="wwwroot\membernew\src\scss\plugins\charts\.DS_Store" />
+    <None Include="wwwroot\membernew\src\scss\plugins\forms\.DS_Store" />
+    <None Include="wwwroot\membernew\src\scss\plugins\ui\.DS_Store" />
+    <None Include="wwwroot\membernew\theme-assets\.DS_Store" />
+    <None Include="wwwroot\membernew\theme-assets\fonts\.DS_Store" />
+    <None Include="wwwroot\membernew\theme-assets\fonts\flag-icon-css\.DS_Store" />
+    <None Include="wwwroot\membernew\theme-assets\images\.DS_Store" />
+    <None Include="wwwroot\membernew\theme-assets\images\backgrounds\.DS_Store" />
+    <None Include="wwwroot\membernew\theme-assets\images\portrait\.DS_Store" />
+    <None Include="wwwroot\membernew\theme-assets\js\.DS_Store" />
+    <None Include="wwwroot\membernew\theme-assets\js\scripts\.DS_Store" />
+    <None Include="wwwroot\membernew\theme-assets\vendors\.DS_Store" />
+    <None Include="wwwroot\membernew\theme-assets\vendors\css\.DS_Store" />
+    <None Include="wwwroot\sneat-1.0.0\.github\workflows\handle-new-issue-comment.yml" />
+    <None Include="wwwroot\sneat-1.0.0\.github\workflows\handle-new-issue.yml" />
+    <None Include="wwwroot\sneat-1.0.0\.github\workflows\issue-staler.yml" />
+  </ItemGroup>
+
+</Project>

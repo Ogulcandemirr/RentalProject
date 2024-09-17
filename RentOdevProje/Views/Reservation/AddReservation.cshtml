@@ -1,0 +1,152 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "AddReservation";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+<section class="w3l-about-breadcrumb text-left">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+        <div class="container">
+            <h2 class="title">Rezervasyon Bilgileri</h2>
+            <ul class="breadcrumbs-custom-path mt-2">
+                <li><a href="/Default/Index">Ana Sayfa</a></li>
+                <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Rezervasyon Oluştur </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<div class="container-fluid my-4" style="background-color: #fff; padding: 30px;">
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="me-4" style="width: 240px;">
+                    <div class="d-flex justify-content-center">
+                        <div class="fw-bold fs-4" style="width: 50px; height: 50px; border-radius: 50%; background-color: #007bff; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">1</div>
+                    </div>
+                    <div class="text-center mt-2" style="font-size: 1.2rem;">Araç Seçimi</div>
+                </div>
+
+                <div class="me-4" style="width: 240px;">
+                    <div class="border-top" style="border-top: 2px solid #000; height: 50px;"></div>
+                </div>
+
+                <div class="me-4" style="width: 240px;">
+                    <div class="d-flex justify-content-center">
+                        <div class="fw-bold fs-4" style="width: 50px; height: 50px; border-radius: 50%; background-color: #007bff; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">2</div>
+                    </div>
+                    <div class="text-center mt-2" style="font-size: 1.2rem;">Rezervasyon Bilgileri</div>
+                </div>
+
+                <div class="me-4" style="width: 240px;">
+                    <div class="border-top" style="border-top: 2px solid #000; height: 50px;"></div>
+                </div>
+
+                <div class="me-4" style="width: 240px;">
+                    <div class="d-flex justify-content-center">
+                        <div class="fw-bold fs-4" style="width: 50px; height: 50px; border-radius: 50%; background-color: #6c757d; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">3</div>
+                    </div>
+                    <div class="text-center mt-2" style="font-size: 1.2rem;">Ödeme Bilgisi</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" style="max-width: 1200px; margin-bottom: 80px; padding: 20px;">
+    <div class="row" style="display: flex; justify-content: space-between;">
+        <!-- Araç Bilgileri Kısmı -->
+        <div class="col-md-6" style="flex: 1; padding-right: 20px;">
+            <div id="selectedItemDetails" style="margin-top: 80px; margin-bottom: 30px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); padding: 20px;">
+                <img id="selectedImage" src="" alt="Selected Item" style="width: 100%; height: auto; max-width: 300px; max-height: 250px; border-radius: 8px;" />
+                <h4 id="selectedName"></h4>
+                <p id="selectedDate"></p>
+                <span id="selectedPrice"></span>
+                <p id="selectedDescription"></p>
+            </div>
+        </div>
+
+        <!-- Rezervasyon Formu Kısmı -->
+        <div class="col-md-6" style="flex: 1; padding-left: 20px;">
+            <div class="container" style="max-width: 600px; margin-bottom: 80px; margin-top: 80px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+                <!-- Form -->
+                <form method="post" action="/Reservation/Ekle" style="display: flex; flex-direction: column; gap: 15px;">
+                    @Html.AntiForgeryToken()
+                    <div>
+                        <label for="IdentityNumber" style="font-weight: bold; display: block; margin-bottom: 5px;">TC Numarası</label>
+                        <input type="text" id="IdentityNumber" name="IdentityNumber" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" />
+                    </div>
+                    <div>
+                        <label for="Name" style="font-weight: bold; display: block; margin-bottom: 5px;">Adınız</label>
+                        <input type="text" id="Name" name="Name" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" />
+                    </div>
+                    <div>
+                        <label for="Surname" style="font-weight: bold; display: block; margin-bottom: 5px;">Soyadınız</label>
+                        <input type="text" id="Surname" name="Surname" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" />
+                    </div>
+                    <div>
+                        <label for="Phone" style="font-weight: bold; display: block; margin-bottom: 5px;">Telefon</label>
+                        <input type="text" id="Phone" name="Phone" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" />
+                    </div>
+                    <div>
+                        <label for="Email" style="font-weight: bold; display: block; margin-bottom: 5px;">E-mail</label>
+                        <input type="email" id="Email" name="Email" required placeholder="example@xyz.com..." style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" />
+                    </div>
+                    <div>
+                        <label for="BirthDate" style="font-weight: bold; display: block; margin-bottom: 5px;">Doğum Tarihi</label>
+                        <input type="date" id="BirthDate" name="BirthDate" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" />
+                    </div>
+                    <div>
+                        <label for="City" style="font-weight: bold; display: block; margin-bottom: 5px;">Şehir</label>
+                        <input type="text" id="City" name="City" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" />
+                    </div>
+                    <div>
+                        <label for="LicenceNumber" style="font-weight: bold; display: block; margin-bottom: 5px;">Ehliyet No</label>
+                        <input type="text" id="LicenceNumber" name="LicenceNumber" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" />
+                    </div>
+                    <div>
+                        <label for="FlyNumber" style="font-weight: bold; display: block; margin-bottom: 5px;">Uçuş No</label>
+                        <input type="text" id="FlyNumber" name="FlyNumber"  style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" />
+                    </div>
+                    <div>
+                        <label for="Adress" style="font-weight: bold; display: block; margin-bottom: 5px;">Adres</label>
+                        <textarea id="Adress" name="Adress" rows="4" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; resize: vertical;" placeholder="Adresinizi giriniz..."></textarea>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" style="padding: 10px 20px; border: none; border-radius: 4px; background-color: #007bff; color: white; font-size: 16px; cursor: pointer;">Devam Et</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
+
+<script>
+    function getQueryParams() {
+        const query = window.location.search.substring(1);
+        const params = new URLSearchParams(query);
+        return {
+            image: params.get('image'),
+            name: params.get('name'),
+            date: params.get('date'),
+            price: params.get('price'),
+            description: params.get('description')
+        };
+    }
+
+    function populateForm() {
+        const params = getQueryParams();
+
+        if (params) {
+            document.getElementById('selectedImage').src = params.image || '';
+             document.getElementById('selectedName').innerText = params.name || '';
+            // document.getElementById('selectedDate').innerText = params.date || '';
+            document.getElementById('selectedPrice').innerText = params.price || '';
+             document.getElementById('selectedDescription').innerText = params.description || '';
+            document.getElementById('selectedDate').innerText = 'Günlük ücret=' + (params.price || '');
+
+        }
+    }
+
+    // Call the function to populate the form when the page loads
+    window.onload = populateForm;
+</script>

@@ -1,0 +1,161 @@
+﻿@model EntityLayer.Concrete.Reservation
+<section class="w3l-main-slider" id="home">
+	<div class="banner-content">
+		<div id="demo-1"
+			 data-zs-src='["/Traversal-Liberty/assets/images/bannernew1.jpg", "/Traversal-Liberty/assets/images/bannerrr.jpg","/Traversal-Liberty/assets/images/banner10.jpg", "/Traversal-Liberty/assets/images/carrrrl.jpg"]'
+			 data-zs-overlay="dots">
+			<div class="demo-inner-content">
+				<div class="container">
+					<div class="banner-infhny">
+						<h3>En Güzel Yolculuklar DemirCar İle Başlar</h3>
+						<h6 class="mb-3">Şimdi Sana En Uygun Aracı Kirala</h6>
+						<div class="flex-wrap search-wthree-field mt-md-5 mt-4">
+							<form method="post" action="@Url.Action("Index", "Reservation")" class="booking-form">
+								<div class="row book-form">
+									<div class="form-input col-md-4 mt-md-0 mt-2">
+										<label for="pickup-place">Nereden Alacaksınız:</label>
+										<select name="selectpicker" class="selectpicker">
+											<option value="" disabled selected>Ofis Seçiniz</option>
+											<option value=".">Antalya Şehirİçi Ofis</option>
+										</select>
+									</div>
+									<div class="form-input col-md-4 mt-md-0 mt-2">
+										<label for="ReservationDate"><b>Alış Tarihi ve Saati:</b></label>
+										<input type="datetime-local" id="ReservationDate" name="pickup-datetime" required min="@DateTime.Now.ToString("yyyy-MM-dd")">
+									</div>
+									<div class="form-input col-md-4 mt-md-0 mt-2">
+										<label for="ReservationDropDate">İade Tarihi ve Saati:</label>
+										<input type="datetime-local" id="ReservationDropDate" name="dropoff-datetime" required min="@DateTime.Now.ToString("yyyy-MM-dd")">
+									</div>
+									<div class="bottom-btn col-md-6 mt-md-0 mt-2">
+										<br />
+										<button class="btn btn-style btn-secondary">
+											<span class="fa fa-search mr-3"
+												  aria-hidden="true"></span> Araç Bul
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	const now = new Date();
+	const year = now.getFullYear();
+	const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+	const day = String(now.getDate()).padStart(2, '0');
+	const hours = String(now.getHours()).padStart(2, '0');
+	const minutes = String(now.getMinutes()).padStart(2, '0');
+
+	// Format to YYYY-MM-DDTHH:MM
+	const minDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
+
+	// Set the min attribute for both inputs
+	document.getElementById('ReservationDate').setAttribute('min', minDateTime);
+	document.getElementById('ReservationDropDate').setAttribute('min', minDateTime);
+</script>
+
+
+<script>
+	const reservationDateInput = document.getElementById('ReservationDate');
+	const dropDateInput = document.getElementById('ReservationDropDate');
+
+	function updateDropDateMin() {
+		const pickupDate = new Date(reservationDateInput.value);
+		if (pickupDate.getTime()) {
+			const year = pickupDate.getFullYear();
+			const month = String(pickupDate.getMonth() + 1).padStart(2, '0');
+			const day = String(pickupDate.getDate()).padStart(2, '0');
+			const hours = String(pickupDate.getHours()).padStart(2, '0');
+			const minutes = String(pickupDate.getMinutes()).padStart(2, '0');
+			const minDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
+			dropDateInput.setAttribute('min', minDateTime);
+		}
+	}
+
+	reservationDateInput.addEventListener('change', updateDropDateMin);
+</script>
+
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const pickupInput = document.getElementById('ReservationDate');
+		const dropoffInput = document.getElementById('ReservationDropDate');
+
+		function updateDropoffMinDate() {
+			const pickupDate = new Date(pickupInput.value);
+			if (!isNaN(pickupDate.getTime())) {
+				// Format the date to yyyy-MM-ddTHH:mm
+				const minDropoffDate = new Date(pickupDate.getTime() + 15 * 60 * 1000); // +15 minutes for buffer
+				const minDateString = minDropoffDate.toISOString().slice(0, 16); // format to yyyy-MM-ddTHH:mm
+				dropoffInput.setAttribute('min', minDateString);
+			}
+		}
+
+		function validatePickupDate() {
+			const pickupDate = new Date(pickupInput.value);
+			const dropoffDate = new Date(dropoffInput.value);
+
+			if (!isNaN(pickupDate.getTime()) && !isNaN(dropoffDate.getTime())) {
+				if (dropoffDate < pickupDate) {
+					alert('Bırakış tarihi alış tarihinden önce olamaz.');
+					dropoffInput.value = '';
+				}
+			}
+		}
+
+		pickupInput.addEventListener('change', function () {
+			updateDropoffMinDate();
+		});
+
+		dropoffInput.addEventListener('change', function () {
+			validatePickupDate();
+		});
+	});
+</script>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const pickupInput = document.getElementById('ReservationDate');
+		const dropoffInput = document.getElementById('ReservationDropDate');
+
+		function updateDropoffMinDate() {
+			const pickupDate = new Date(pickupInput.value);
+			if (!isNaN(pickupDate.getTime())) {
+				// Format the date to yyyy-MM-ddTHH:mm
+				const minDropoffDate = new Date(pickupDate.getTime() + 15 * 60 * 1000); // +15 minutes for buffer
+				const minDateString = minDropoffDate.toISOString().slice(0, 16); // format to yyyy-MM-ddTHH:mm
+				dropoffInput.setAttribute('min', minDateString);
+			}
+		}
+
+		function validateDates() {
+			const pickupDate = new Date(pickupInput.value);
+			const dropoffDate = new Date(dropoffInput.value);
+
+			if (!isNaN(pickupDate.getTime()) && !isNaN(dropoffDate.getTime())) {
+				if (dropoffDate < pickupDate) {
+					alert('Bırakış tarihi alış tarihinden önce olamaz.');
+					// Reset the dates
+					pickupInput.value = '';
+					dropoffInput.value = '';
+					dropoffInput.removeAttribute('min'); // Clear the min attribute
+				}
+			}
+		}
+
+		pickupInput.addEventListener('change', function () {
+			updateDropoffMinDate();
+			validateDates(); // Check the dates after updating
+		});
+
+		dropoffInput.addEventListener('change', function () {
+			validateDates();
+		});
+	});
+</script>

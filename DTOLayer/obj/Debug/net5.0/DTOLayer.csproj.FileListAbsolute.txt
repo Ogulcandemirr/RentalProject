@@ -1,0 +1,12 @@
+C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DTOLayer\bin\Debug\net5.0\DTOLayer.deps.json
+C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DTOLayer\bin\Debug\net5.0\DTOLayer.dll
+C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DTOLayer\bin\Debug\net5.0\DTOLayer.pdb
+C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DTOLayer\obj\Debug\net5.0\DTOLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DTOLayer\obj\Debug\net5.0\DTOLayer.AssemblyInfoInputs.cache
+C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DTOLayer\obj\Debug\net5.0\DTOLayer.AssemblyInfo.cs
+C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DTOLayer\obj\Debug\net5.0\DTOLayer.csproj.CoreCompileInputs.cache
+C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DTOLayer\obj\Debug\net5.0\DTOLayer.sourcelink.json
+C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DTOLayer\obj\Debug\net5.0\DTOLayer.dll
+C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DTOLayer\obj\Debug\net5.0\refint\DTOLayer.dll
+C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DTOLayer\obj\Debug\net5.0\DTOLayer.pdb
+C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DTOLayer\obj\Debug\net5.0\ref\DTOLayer.dll

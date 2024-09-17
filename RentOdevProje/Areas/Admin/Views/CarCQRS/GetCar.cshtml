@@ -1,0 +1,21 @@
+﻿@model GetCarByIDQueryResult
+@{
+    ViewData["Title"] = "GetCar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Araç Düzenleme Sayfası</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="CarId" />
+    <label>Araç</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <label>Günlük</label>
+    <input type="text" asp-for="Date" class="form-control" />
+    <br />
+    <label>Fiyat</label>
+    <input type="text" asp-for="Price" class="form-control" />
+    <br />
+    <button class="btn btn-outline-success">Araç Bilgilerini Güncelle</button>
+</form>

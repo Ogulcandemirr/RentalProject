@@ -1,0 +1,172 @@
+2024-07-19T16:44:43.0245133+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-07-19T16:44:43.0288090+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-07-19T16:44:43.0288690+03:00  [INF] Content root path: "C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje" (b5d60022)
+2024-07-19T16:45:02.7937118+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-07-19T16:45:02.7971191+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-07-19T16:45:02.7971661+03:00  [INF] Content root path: "C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje" (b5d60022)
+2024-07-19T16:45:07.4323050+03:00 80000112-000c-fc00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DataAccessLayer.EntitiyFramework.EfGuideDal.ChangeToFalseByGuide(Int32 id) in C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DataAccessLayer\EntitiyFramework\EfGuideDal.cs:line 19
+   at BusinessLayer.Concrete.GuideManager.TChangeToFalseByGuide(Int32 id) in C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\BusinessLayer\Concrete\GuideManager.cs:line 28
+   at RentOdevProje.Areas.Admin.Controllers.GuideController.ChangeToFalse(Int32 id) in C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje\Areas\Admin\Controllers\GuideController.cs:line 74
+   at lambda_method117(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-19T16:47:02.5109794+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-07-19T16:47:02.5144271+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-07-19T16:47:02.5144837+03:00  [INF] Content root path: "C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje" (b5d60022)
+2024-07-19T16:47:03.3008806+03:00 800000ba-000c-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DataAccessLayer.EntitiyFramework.EfGuideDal.ChangeToFalseByGuide(Int32 id) in C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DataAccessLayer\EntitiyFramework\EfGuideDal.cs:line 19
+   at BusinessLayer.Concrete.GuideManager.TChangeToFalseByGuide(Int32 id) in C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\BusinessLayer\Concrete\GuideManager.cs:line 28
+   at RentOdevProje.Areas.Admin.Controllers.GuideController.ChangeToFalse(Int32 id) in C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje\Areas\Admin\Controllers\GuideController.cs:line 74
+   at lambda_method20(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-19T16:47:24.0538212+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-07-19T16:47:24.0571271+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-07-19T16:47:24.0571786+03:00  [INF] Content root path: "C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje" (b5d60022)
+2024-07-19T16:47:26.1844600+03:00 80000029-000e-fb00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DataAccessLayer.EntitiyFramework.EfGuideDal.ChangeToFalseByGuide(Int32 id) in C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DataAccessLayer\EntitiyFramework\EfGuideDal.cs:line 19
+   at BusinessLayer.Concrete.GuideManager.TChangeToFalseByGuide(Int32 id) in C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\BusinessLayer\Concrete\GuideManager.cs:line 28
+   at RentOdevProje.Areas.Admin.Controllers.GuideController.ChangeToFalse(Int32 id) in C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje\Areas\Admin\Controllers\GuideController.cs:line 74
+   at lambda_method117(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-19T16:48:41.0837067+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-07-19T16:48:41.0873320+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-07-19T16:48:41.0874212+03:00  [INF] Content root path: "C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje" (b5d60022)
+2024-07-19T16:48:41.9196391+03:00 800000bc-000c-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DataAccessLayer.EntitiyFramework.EfGuideDal.ChangeToFalseByGuide(Int32 id) in C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DataAccessLayer\EntitiyFramework\EfGuideDal.cs:line 19
+   at BusinessLayer.Concrete.GuideManager.TChangeToFalseByGuide(Int32 id) in C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\BusinessLayer\Concrete\GuideManager.cs:line 28
+   at RentOdevProje.Areas.Admin.Controllers.GuideController.ChangeToFalse(Int32 id) in C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje\Areas\Admin\Controllers\GuideController.cs:line 74
+   at lambda_method20(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-19T16:48:44.9095084+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-07-19T16:48:44.9127224+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-07-19T16:48:44.9127765+03:00  [INF] Content root path: "C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje" (b5d60022)
+2024-07-19T16:51:20.0277279+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-07-19T16:51:20.0309315+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-07-19T16:51:20.0309850+03:00  [INF] Content root path: "C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje" (b5d60022)
+2024-07-19T16:51:33.2779378+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-07-19T16:51:33.2811713+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-07-19T16:51:33.2812233+03:00  [INF] Content root path: "C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje" (b5d60022)
+2024-07-19T16:52:25.9944429+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-07-19T16:52:25.9979029+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-07-19T16:52:25.9979593+03:00  [INF] Content root path: "C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje" (b5d60022)
+2024-07-19T16:52:40.0169343+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-07-19T16:52:40.0205187+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-07-19T16:52:40.0206051+03:00  [INF] Content root path: "C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje" (b5d60022)
+2024-07-19T16:52:46.0318350+03:00 800000b3-0012-fb00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DataAccessLayer.EntitiyFramework.EfGuideDal.ChangeToTrueByGuide(Int32 id) in C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\DataAccessLayer\EntitiyFramework\EfGuideDal.cs:line 28
+   at BusinessLayer.Concrete.GuideManager.TChangeToTrueByGuide(Int32 id) in C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\BusinessLayer\Concrete\GuideManager.cs:line 33
+   at RentOdevProje.Areas.Admin.Controllers.GuideController.ChangeToTrue(Int32 id) in C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje\Areas\Admin\Controllers\GuideController.cs:line 68
+   at lambda_method117(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-19T16:54:32.1892491+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-07-19T16:54:32.1933478+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-07-19T16:54:32.1934255+03:00  [INF] Content root path: "C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje" (b5d60022)
+2024-07-19T16:57:38.1633850+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-07-19T16:57:38.1666649+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-07-19T16:57:38.1667073+03:00  [INF] Content root path: "C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje" (b5d60022)
+2024-07-19T16:58:54.4536598+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-07-19T16:58:54.4573541+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-07-19T16:58:54.4574176+03:00  [INF] Content root path: "C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje" (b5d60022)
+2024-07-19T16:59:23.8057083+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-07-19T16:59:23.8089385+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-07-19T16:59:23.8089822+03:00  [INF] Content root path: "C:\Users\OĞULCAN DEMİR\Desktop\RentOdevProje\RentOdevProje" (b5d60022)
